@@ -1,6 +1,6 @@
 ﻿#Credenciales de acceso
-$user = "user@domain.com"
-$password = ConvertTo-SecureString "password" -AsPlainText -Force 
+$user = Read-Host "Ingresar usuario"
+$password = Read-Host "Ingresar clave" -AsSecureString
 $credential = New-Object System.Management.Automation.PSCredential ($user, $password)
 Login-PowerBI -Credential $credential
 
